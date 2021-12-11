@@ -1,0 +1,101 @@
+:root {
+    --red: #f00;
+    --green: rgb(39, 177, 39);
+    --blue: #00f;
+    --yellow: rgb(255, 238, 0);
+    --brown: rgb(66, 26, 20);
+    --orange: rgb(255, 102, 0);
+    --white: #fff;
+    --black: #000;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    width: 20px;
+    height: 20px;
+    border-radius: 40%;
+}
+
+.row {
+    border: solid;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 90%;
+    justify-content: space-evenly;
+    margin-left: 5%;
+}
+
+.choice {
+    /* border: solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* padding: 3px; */
+    width: 60%;
+    margin: auto 20px;
+}
+
+.results {
+    /* border: solid; */
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10%;
+    margin: auto;
+}
+
+.results button {
+    /* padding: 25%; */
+}
+
+.palette {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.palette div {
+    width: 100%;
+    height: 20%;
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.brown {
+    background-color: var(--brown);
+}
+
+#check {
+    width: 96%;
+    height: 5%;
+    position: absolute;
+    bottom: 5px;
+    left: 2%;
+    border-radius: 30px;
+}
