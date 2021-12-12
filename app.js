@@ -10,6 +10,16 @@ var current = []
 var colors = ["var(--red)", "var(--brown)", "var(--green)", "var(--blue)", "var(--yellow)", "var(--orange)", "var(--white)"]
 
 function go() {
+
+    let divs = document.getElementsByClassName("row")
+
+    for (let div = 0; div < divs.length; div++) {
+        if (div != turn) {
+            document.getElementsByClassName("row")[div].classList.add("disabledButtons");
+        }
+    }
+
+
     document.getElementsByClassName("choiceEl1")[turn].addEventListener("click", function() {
         this.style.background = colors[n0]
         current[0] = colors[n0]
@@ -45,6 +55,8 @@ function go() {
             n3 = 0
         }
     })
+
+
 }
 
 go()
@@ -100,15 +112,20 @@ function check() {
     if (areEqual(current, riddle)) {
         alert("win")
     }
+    if (turn == 6) {
+        alert("stop")
+    }
 
-    if (turn == 6) {
-        alert("stop")
-    }
     turn++
-    console.log(turn)
-    if (turn == 6) {
-        alert("stop")
-    }
+    current = []
     go()
 
+}
+
+function checkpre() {
+    if (current.length == 4) {
+        check()
+    } else {
+        console.log("sdv")
+    }
 }
